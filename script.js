@@ -1,4 +1,4 @@
-// Vehicle data with real-world specifications
+// Vehicle data with European specifications and Euro pricing
 const vehicles = [
     {
         name: "Tesla Model 3",
@@ -6,10 +6,10 @@ const vehicles = [
         batteryCapacity: 75,
         range: 358,
         efficiency: 25,
-        price: "$41,990",
+        price: "€42,990",
         chargingSpeed: "250 kW",
         acceleration: "3.1s",
-        topSpeed: "162 mph",
+        topSpeed: "261 km/h",
         icon: "🚗"
     },
     {
@@ -18,47 +18,35 @@ const vehicles = [
         batteryCapacity: 75,
         range: 330,
         efficiency: 28,
-        price: "$47,740",
+        price: "€48,740",
         chargingSpeed: "250 kW",
         acceleration: "3.5s",
-        topSpeed: "155 mph",
+        topSpeed: "250 km/h",
         icon: "🚙"
     },
     {
-        name: "Ford Mustang Mach-E",
+        name: "Volkswagen ID.3",
+        category: "sedan",
+        batteryCapacity: 77,
+        range: 340,
+        efficiency: 26,
+        price: "€39,995",
+        chargingSpeed: "125 kW",
+        acceleration: "7.3s",
+        topSpeed: "160 km/h",
+        icon: "🌍"
+    },
+    {
+        name: "Volkswagen ID.4",
         category: "suv",
-        batteryCapacity: 88,
-        range: 314,
-        efficiency: 28,
-        price: "$42,995",
-        chargingSpeed: "150 kW",
-        acceleration: "3.8s",
-        topSpeed: "130 mph",
-        icon: "🐎"
-    },
-    {
-        name: "Chevrolet Bolt EV",
-        category: "sedan",
-        batteryCapacity: 65,
-        range: 259,
-        efficiency: 28,
-        price: "$26,500",
-        chargingSpeed: "55 kW",
-        acceleration: "6.5s",
-        topSpeed: "93 mph",
-        icon: "⚡"
-    },
-    {
-        name: "Nissan Leaf",
-        category: "sedan",
-        batteryCapacity: 62,
-        range: 226,
-        efficiency: 30,
-        price: "$28,140",
-        chargingSpeed: "100 kW",
-        acceleration: "7.4s",
-        topSpeed: "90 mph",
-        icon: "🍃"
+        batteryCapacity: 82,
+        range: 275,
+        efficiency: 29,
+        price: "€44,790",
+        chargingSpeed: "135 kW",
+        acceleration: "7.1s",
+        topSpeed: "180 km/h",
+        icon: "🌍"
     },
     {
         name: "BMW i4",
@@ -66,10 +54,22 @@ const vehicles = [
         batteryCapacity: 83.9,
         range: 301,
         efficiency: 27,
-        price: "$52,200",
+        price: "€52,200",
         chargingSpeed: "200 kW",
         acceleration: "3.9s",
-        topSpeed: "124 mph",
+        topSpeed: "200 km/h",
+        icon: "🏎️"
+    },
+    {
+        name: "BMW iX",
+        category: "luxury",
+        batteryCapacity: 111.5,
+        range: 380,
+        efficiency: 30,
+        price: "€84,100",
+        chargingSpeed: "200 kW",
+        acceleration: "4.6s",
+        topSpeed: "200 km/h",
         icon: "🏎️"
     },
     {
@@ -78,35 +78,35 @@ const vehicles = [
         batteryCapacity: 107.8,
         range: 350,
         efficiency: 30,
-        price: "$102,310",
+        price: "€102,310",
         chargingSpeed: "200 kW",
         acceleration: "3.8s",
-        topSpeed: "130 mph",
+        topSpeed: "210 km/h",
         icon: "⭐"
     },
     {
-        name: "Rivian R1T",
+        name: "Mercedes EQB",
         category: "suv",
-        batteryCapacity: 135,
-        range: 314,
-        efficiency: 35,
-        price: "$73,000",
-        chargingSpeed: "200 kW",
-        acceleration: "3.0s",
-        topSpeed: "115 mph",
-        icon: "🚛"
+        batteryCapacity: 66.5,
+        range: 260,
+        efficiency: 28,
+        price: "€54,500",
+        chargingSpeed: "100 kW",
+        acceleration: "8.0s",
+        topSpeed: "160 km/h",
+        icon: "⭐"
     },
     {
-        name: "Lucid Air",
-        category: "luxury",
-        batteryCapacity: 118,
-        range: 520,
-        efficiency: 25,
-        price: "$77,400",
-        chargingSpeed: "300 kW",
-        acceleration: "2.8s",
-        topSpeed: "168 mph",
-        icon: "✨"
+        name: "Audi Q4 e-tron",
+        category: "suv",
+        batteryCapacity: 82,
+        range: 300,
+        efficiency: 28,
+        price: "€47,500",
+        chargingSpeed: "125 kW",
+        acceleration: "6.2s",
+        topSpeed: "180 km/h",
+        icon: "🏎️"
     },
     {
         name: "Hyundai Ioniq 5",
@@ -114,10 +114,10 @@ const vehicles = [
         batteryCapacity: 77.4,
         range: 303,
         efficiency: 26,
-        price: "$41,450",
+        price: "€44,450",
         chargingSpeed: "350 kW",
         acceleration: "5.0s",
-        topSpeed: "115 mph",
+        topSpeed: "185 km/h",
         icon: "🔋"
     },
     {
@@ -126,23 +126,59 @@ const vehicles = [
         batteryCapacity: 77.4,
         range: 310,
         efficiency: 26,
-        price: "$42,600",
+        price: "€45,600",
         chargingSpeed: "350 kW",
         acceleration: "5.1s",
-        topSpeed: "115 mph",
+        topSpeed: "185 km/h",
         icon: "⚡"
     },
     {
-        name: "Volkswagen ID.4",
+        name: "Peugeot e-208",
+        category: "sedan",
+        batteryCapacity: 50,
+        range: 225,
+        efficiency: 24,
+        price: "€32,500",
+        chargingSpeed: "100 kW",
+        acceleration: "8.3s",
+        topSpeed: "150 km/h",
+        icon: "🇫🇷"
+    },
+    {
+        name: "Renault Zoe",
+        category: "sedan",
+        batteryCapacity: 52,
+        range: 240,
+        efficiency: 25,
+        price: "€29,500",
+        chargingSpeed: "50 kW",
+        acceleration: "9.5s",
+        topSpeed: "135 km/h",
+        icon: "🇫🇷"
+    },
+    {
+        name: "Skoda Enyaq",
         category: "suv",
         batteryCapacity: 82,
-        range: 275,
+        range: 290,
         efficiency: 29,
-        price: "$38,790",
-        chargingSpeed: "135 kW",
-        acceleration: "7.1s",
-        topSpeed: "112 mph",
-        icon: "🌍"
+        price: "€42,500",
+        chargingSpeed: "125 kW",
+        acceleration: "6.9s",
+        topSpeed: "180 km/h",
+        icon: "🇨🇿"
+    },
+    {
+        name: "Polestar 2",
+        category: "sedan",
+        batteryCapacity: 78,
+        range: 300,
+        efficiency: 27,
+        price: "€48,900",
+        chargingSpeed: "150 kW",
+        acceleration: "4.7s",
+        topSpeed: "205 km/h",
+        icon: "🇸🇪"
     }
 ];
 
@@ -283,19 +319,19 @@ function scrollToSection(sectionId) {
 // Range calculator function
 function calculateRange() {
     const batteryCapacity = parseFloat(document.getElementById('batteryCapacity').value) || 75;
-    const efficiency = parseFloat(document.getElementById('efficiency').value) || 30;
-    const temperature = parseFloat(document.getElementById('temperature').value) || 70;
-    const speed = parseFloat(document.getElementById('speed').value) || 65;
+    const efficiency = parseFloat(document.getElementById('efficiency').value) || 18;
+    const temperature = parseFloat(document.getElementById('temperature').value) || 20;
+    const speed = parseFloat(document.getElementById('speed').value) || 105;
 
     // Calculate ideal range
     const idealRange = (batteryCapacity / efficiency) * 100;
     
-    // Calculate cold weather impact (up to 40% reduction at 0°F)
-    const tempFactor = Math.max(0.6, 1 - (70 - temperature) * 0.006);
+    // Calculate cold weather impact (up to 40% reduction at 0°C)
+    const tempFactor = Math.max(0.6, 1 - (20 - temperature) * 0.006);
     const coldRange = idealRange * tempFactor;
     
     // Calculate highway impact (higher speeds reduce efficiency)
-    const speedFactor = Math.max(0.7, 1 - (speed - 55) * 0.01);
+    const speedFactor = Math.max(0.7, 1 - (speed - 90) * 0.01);
     const highwayRange = idealRange * speedFactor;
     
     // Calculate battery degradation over 5 years (typically 10-15%)
@@ -303,10 +339,10 @@ function calculateRange() {
     const degradedRange = idealRange * degradationFactor;
 
     // Display results
-    document.getElementById('idealRange').textContent = `${Math.round(idealRange)} miles`;
-    document.getElementById('coldRange').textContent = `${Math.round(coldRange)} miles`;
-    document.getElementById('highwayRange').textContent = `${Math.round(highwayRange)} miles`;
-    document.getElementById('degradation').textContent = `${Math.round(degradedRange)} miles`;
+    document.getElementById('idealRange').textContent = `${Math.round(idealRange)} km`;
+    document.getElementById('coldRange').textContent = `${Math.round(coldRange)} km`;
+    document.getElementById('highwayRange').textContent = `${Math.round(highwayRange)} km`;
+    document.getElementById('degradation').textContent = `${Math.round(degradedRange)} km`;
 
     // Add visual feedback
     const results = document.querySelector('.calculator-results');
@@ -429,25 +465,25 @@ document.addEventListener('DOMContentLoaded', addVehicleComparison);
 // Add energy cost calculator
 function calculateEnergyCost() {
     const batteryCapacity = parseFloat(document.getElementById('batteryCapacity').value) || 75;
-    const electricityRate = 0.14; // Average US electricity rate per kWh
+    const electricityRate = 0.25; // Average European electricity rate per kWh
     const costPerCharge = batteryCapacity * electricityRate;
-    const costPerMile = costPerCharge / ((batteryCapacity / 30) * 100); // Assuming 30 kWh/100mi efficiency
+    const costPerKm = costPerCharge / ((batteryCapacity / 18) * 100); // Assuming 18 kWh/100km efficiency
     
     return {
         costPerCharge: costPerCharge.toFixed(2),
-        costPerMile: costPerMile.toFixed(3)
+        costPerKm: costPerKm.toFixed(3)
     };
 }
 
 // Add environmental impact calculator
 function calculateEnvironmentalImpact() {
     const batteryCapacity = parseFloat(document.getElementById('batteryCapacity').value) || 75;
-    const efficiency = parseFloat(document.getElementById('efficiency').value) || 30;
+    const efficiency = parseFloat(document.getElementById('efficiency').value) || 18;
     const range = (batteryCapacity / efficiency) * 100;
     
-    // CO2 emissions comparison (gas car emits ~404g CO2/mile)
-    const gasEmissions = range * 404; // grams
-    const evEmissions = range * 100; // grams (from electricity generation)
+    // CO2 emissions comparison (gas car emits ~120g CO2/km in Europe)
+    const gasEmissions = range * 120; // grams
+    const evEmissions = range * 50; // grams (from European electricity generation)
     const emissionsSaved = gasEmissions - evEmissions;
     
     return {
@@ -470,11 +506,11 @@ function enhancedCalculateRange() {
     additionalInfo.innerHTML = `
         <div class="result-item">
             <span>Cost per charge:</span>
-            <span>$${energyCost.costPerCharge}</span>
+            <span>€${energyCost.costPerCharge}</span>
         </div>
         <div class="result-item">
-            <span>Cost per mile:</span>
-            <span>$${energyCost.costPerMile}</span>
+            <span>Cost per km:</span>
+            <span>€${energyCost.costPerKm}</span>
         </div>
         <div class="result-item">
             <span>CO2 saved vs gas:</span>

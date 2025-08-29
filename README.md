@@ -1,6 +1,6 @@
-# Electric Vehicle Guide Website
+# European Electric Vehicle Guide Website
 
-A comprehensive, interactive website for understanding electric vehicles, charging, and the future of transportation.
+A comprehensive, interactive website for understanding electric vehicles, charging, and the future of transportation in Europe.
 
 ## Features
 
@@ -74,26 +74,26 @@ A comprehensive, interactive website for understanding electric vehicles, chargi
 
 The range calculator takes into account:
 - Battery capacity (kWh)
-- Vehicle efficiency (kWh/100mi)
+- Vehicle efficiency (kWh/100km)
 - Temperature effects (cold weather reduces range)
 - Speed impact (highway driving reduces efficiency)
 - Battery degradation over time
-- Energy costs and environmental impact
+- Energy costs and environmental impact (European rates)
 
 ## Vehicle Database
 
-Includes popular EVs like:
+Includes popular European EVs like:
 - Tesla Model 3 & Y
-- Ford Mustang Mach-E
-- Chevrolet Bolt EV
-- Nissan Leaf
-- BMW i4
-- Mercedes EQS
-- Rivian R1T
-- Lucid Air
+- Volkswagen ID.3 & ID.4
+- BMW i4 & iX
+- Mercedes EQS & EQB
+- Audi Q4 e-tron
 - Hyundai Ioniq 5
 - Kia EV6
-- Volkswagen ID.4
+- Peugeot e-208
+- Renault Zoe
+- Skoda Enyaq
+- Polestar 2
 
 ## Environmental Impact
 
