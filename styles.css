@@ -279,6 +279,94 @@ body {
     border-radius: 10px;
 }
 
+/* Technical Details */
+.technical-details {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+}
+
+.technical-details h4 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.technical-details ul {
+    margin-top: 10px;
+}
+
+.technical-details li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.technical-details li:last-child {
+    border-bottom: none;
+}
+
+.technical-details strong {
+    color: white;
+}
+
+/* Efficiency Grid */
+.efficiency-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.efficiency-item h4 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.efficiency-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.step {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 80px;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Responsive adjustments for technical details */
+@media (max-width: 768px) {
+    .efficiency-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .efficiency-flow {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .arrow {
+        transform: rotate(90deg);
+    }
+}
+
 .electron-flow {
     display: flex;
     justify-content: space-between;
