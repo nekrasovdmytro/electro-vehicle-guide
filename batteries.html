@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Technology Deep Dive - EV Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bolt"></i>
+                <span>EV Guide</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#chemistry">Chemistry</a></li>
+                <li><a href="#construction">Construction</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#management">BMS</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero battery-hero">
+        <div class="hero-content">
+            <h1>Battery Technology Deep Dive</h1>
+            <p>Understanding the science, chemistry, and engineering behind electric vehicle batteries</p>
+            <button class="cta-button" onclick="scrollToSection('chemistry')">Explore Battery Science</button>
+        </div>
+        <div class="hero-visual">
+            <div class="battery-animation">
+                <div class="battery-cell">
+                    <div class="cathode"></div>
+                    <div class="separator"></div>
+                    <div class="anode"></div>
+                    <div class="electrolyte"></div>
+                </div>
+                <div class="electron-flow-battery">
+                    <div class="electron"></div>
+                    <div class="electron"></div>
+                    <div class="electron"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="chemistry" class="section">
+            <div class="container">
+                <h2>Battery Chemistry Fundamentals</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3><i class="fas fa-atom"></i> Electrochemical Principles</h3>
+                        <p>Batteries work through electrochemical reactions that convert chemical energy to electrical energy.</p>
+                        <div class="technical-details">
+                            <h4>Basic Electrochemical Cell:</h4>
+                            <ul>
+                                <li><strong>Anode (Negative):</strong> Oxidation occurs, electrons are released</li>
+                                <li><strong>Cathode (Positive):</strong> Reduction occurs, electrons are accepted</li>
+                                <li><strong>Electrolyte:</strong> Ionic conductor, allows ion flow</li>
+                                <li><strong>Separator:</strong> Prevents direct contact between electrodes</li>
+                            </ul>
+                            <h4>Chemical Reactions:</h4>
+                            <ul>
+                                <li><strong>Discharge:</strong> Li+ ions move from anode to cathode</li>
+                                <li><strong>Charge:</strong> Li+ ions move from cathode to anode</li>
+                                <li><strong>Current Flow:</strong> Electrons flow through external circuit</li>
+                                <li><strong>Energy Storage:</strong> Chemical potential energy in electrode materials</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-flask"></i> Lithium-Ion Chemistry</h3>
+                        <p>Modern EVs use lithium-ion batteries due to their high energy density and efficiency.</p>
+                        <div class="technical-details">
+                            <h4>Lithium-Ion Components:</h4>
+                            <ul>
+                                <li><strong>Anode Material:</strong> Graphite (C₆) with lithium intercalation</li>
+                                <li><strong>Cathode Material:</strong> Lithium metal oxides (LiCoO₂, LiFePO₄, etc.)</li>
+                                <li><strong>Electrolyte:</strong> Lithium salt (LiPF₆) in organic solvents</li>
+                                <li><strong>Current Collectors:</strong> Copper (anode), aluminum (cathode)</li>
+                            </ul>
+                            <h4>Key Advantages:</h4>
+                            <ul>
+                                <li><strong>High Energy Density:</strong> 150-300 Wh/kg</li>
+                                <li><strong>Low Self-Discharge:</strong> 2-3% per month</li>
+                                <li><strong>High Efficiency:</strong> 95-99% round-trip efficiency</li>
+                                <li><strong>Long Cycle Life:</strong> 1000-3000 cycles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chemistry-types">
+                    <h3><i class="fas fa-microscope"></i> Battery Chemistry Types</h3>
+                    <div class="chemistry-grid">
+                        <div class="chemistry-card">
+                            <h4>NMC (Nickel Manganese Cobalt)</h4>
+                            <div class="chemistry-specs">
+                                <div class="spec-item">
+                                    <span>Energy Density:</span>
+                                    <span>200-300 Wh/kg</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Power Density:</span>
+                                    <span>1000-2000 W/kg</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Cycle Life:</span>
+                                    <span>2000-3000 cycles</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Cost:</span>
+                                    <span>€120-180/kWh</span>
+                                </div>
+                            </div>
+                            <div class="technical-details">
+                                <h5>Chemical Formula: LiNiₓMnᵧCoᵦO₂</h5>
+                                <p>Most common in EVs due to balanced performance. Used by Tesla, BMW, VW.</p>
+                            </div>
+                        </div>
+                        <div class="chemistry-card">
+                            <h4>LFP (Lithium Iron Phosphate)</h4>
+                            <div class="chemistry-specs">
+                                <div class="spec-item">
+                                    <span>Energy Density:</span>
+                                    <span>150-200 Wh/kg</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Power Density:</span>
+                                    <span>1500-3000 W/kg</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Cycle Life:</span>
+                                    <span>3000-5000 cycles</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Cost:</span>
+                                    <span>€80-120/kWh</span>
+                                </div>
+                            </div>
+                            <div class="technical-details">
+                                <h5>Chemical Formula: LiFePO₄</h5>
+                                <p>Excellent safety and longevity. Used by Tesla Model 3 Standard Range, BYD.</p>
+                            </div>
+                        </div>
+                        <div class="chemistry-card">
+                            <h4>NCA (Nickel Cobalt Aluminum)</h4>
+                            <div class="chemistry-specs">
+                                <div class="spec-item">
+                                    <span>Energy Density:</span>
+                                    <span>250-350 Wh/kg</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Power Density:</span>
+                                    <span>800-1500 W/kg</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Cycle Life:</span>
+                                    <span>1500-2500 cycles</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span>Cost:</span>
+                                    <span>€140-200/kWh</span>
+                                </div>
+                            </div>
+                            <div class="technical-details">
+                                <h5>Chemical Formula: LiNiₓCoᵧAlᵦO₂</h5>
+                                <p>Highest energy density. Used by Tesla Model S/X, Lucid Air.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="construction" class="section">
+            <div class="container">
+                <h2>Battery Construction & Architecture</h2>
+                <div class="construction-hierarchy">
+                    <div class="hierarchy-item">
+                        <h3><i class="fas fa-layer-group"></i> Battery Pack Structure</h3>
+                        <div class="hierarchy-levels">
+                            <div class="level">
+                                <h4>Battery Pack</h4>
+                                <p>Complete battery system with thermal management and electronics</p>
+                                <div class="specs">
+                                    <span>Capacity: 50-150 kWh</span>
+                                    <span>Voltage: 350-800V</span>
+                                    <span>Weight: 300-600 kg</span>
+                                </div>
+                            </div>
+                            <div class="level">
+                                <h4>Module</h4>
+                                <p>Group of cells with shared thermal management</p>
+                                <div class="specs">
+                                    <span>Capacity: 5-15 kWh</span>
+                                    <span>Cells: 50-200 per module</span>
+                                    <span>Voltage: 50-100V</span>
+                                </div>
+                            </div>
+                            <div class="level">
+                                <h4>Cell</h4>
+                                <p>Individual electrochemical unit</p>
+                                <div class="specs">
+                                    <span>Capacity: 50-100 Ah</span>
+                                    <span>Voltage: 3.2-4.2V</span>
+                                    <span>Energy: 150-400 Wh</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3><i class="fas fa-cube"></i> Cell Formats</h3>
+                        <div class="cell-formats">
+                            <div class="format-item">
+                                <h4>Prismatic Cells</h4>
+                                <div class="technical-details">
+                                    <ul>
+                                        <li><strong>Shape:</strong> Rectangular prism</li>
+                                        <li><strong>Capacity:</strong> 50-100 Ah</li>
+                                        <li><strong>Advantages:</strong> High energy density, good thermal management</li>
+                                        <li><strong>Used by:</strong> BMW, VW, Mercedes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="format-item">
+                                <h4>Cylindrical Cells</h4>
+                                <div class="technical-details">
+                                    <ul>
+                                        <li><strong>Shape:</strong> Cylinder (18650, 21700, 4680)</li>
+                                        <li><strong>Capacity:</strong> 3-25 Ah</li>
+                                        <li><strong>Advantages:</strong> Mature technology, good thermal performance</li>
+                                        <li><strong>Used by:</strong> Tesla, Lucid</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="format-item">
+                                <h4>Pouch Cells</h4>
+                                <div class="technical-details">
+                                    <ul>
+                                        <li><strong>Shape:</strong> Flexible pouch</li>
+                                        <li><strong>Capacity:</strong> 20-80 Ah</li>
+                                        <li><strong>Advantages:</strong> Lightweight, flexible design</li>
+                                        <li><strong>Used by:</strong> GM, Hyundai, Kia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-thermometer-half"></i> Thermal Management</h3>
+                        <div class="technical-details">
+                            <h4>Cooling Systems:</h4>
+                            <ul>
+                                <li><strong>Liquid Cooling:</strong> Glycol-based coolant through channels</li>
+                                <li><strong>Air Cooling:</strong> Forced air circulation (less common)</li>
+                                <li><strong>Phase Change:</strong> Heat pipes and thermal interface materials</li>
+                                <li><strong>Temperature Range:</strong> 15-35°C optimal operation</li>
+                            </ul>
+                            <h4>Heating Systems:</h4>
+                            <ul>
+                                <li><strong>Resistive Heating:</strong> Electric heaters in cold conditions</li>
+                                <li><strong>Heat Pump:</strong> Efficient heating using waste heat</li>
+                                <li><strong>Preconditioning:</strong> Battery warming before charging</li>
+                                <li><strong>Thermal Insulation:</strong> Minimize heat loss</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="performance" class="section">
+            <div class="container">
+                <h2>Battery Performance Characteristics</h2>
+                <div class="performance-metrics">
+                    <div class="metric-card">
+                        <h3><i class="fas fa-chart-line"></i> Energy Density</h3>
+                        <div class="metric-chart">
+                            <div class="chart-bar">
+                                <div class="bar-label">NCA</div>
+                                <div class="bar" style="width: 90%; background: linear-gradient(45deg, #667eea, #764ba2);">350 Wh/kg</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-label">NMC</div>
+                                <div class="bar" style="width: 75%; background: linear-gradient(45deg, #667eea, #764ba2);">250 Wh/kg</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-label">LFP</div>
+                                <div class="bar" style="width: 50%; background: linear-gradient(45deg, #667eea, #764ba2);">180 Wh/kg</div>
+                            </div>
+                        </div>
+                        <div class="technical-details">
+                            <h4>Energy Density Factors:</h4>
+                            <ul>
+                                <li><strong>Electrode Materials:</strong> Higher capacity materials increase density</li>
+                                <li><strong>Cell Design:</strong> Thinner separators and current collectors</li>
+                                <li><strong>Packaging:</strong> Efficient use of space in battery pack</li>
+                                <li><strong>Chemistry:</strong> Different chemistries have varying theoretical limits</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3><i class="fas fa-tachometer-alt"></i> Power Density</h3>
+                        <div class="power-curve">
+                            <div class="curve-point">
+                                <span>Peak Power: 200-400 kW</span>
+                                <span>0-50% SoC</span>
+                            </div>
+                            <div class="curve-point">
+                                <span>Reduced Power: 100-200 kW</span>
+                                <span>50-80% SoC</span>
+                            </div>
+                            <div class="curve-point">
+                                <span>Limited Power: 50-100 kW</span>
+                                <span>80-100% SoC</span>
+                            </div>
+                        </div>
+                        <div class="technical-details">
+                            <h4>Power Limitations:</h4>
+                            <ul>
+                                <li><strong>Internal Resistance:</strong> Increases with age and temperature</li>
+                                <li><strong>State of Charge:</strong> Lower power at high SoC</li>
+                                <li><strong>Temperature:</strong> Cold reduces power capability</li>
+                                <li><strong>Chemistry:</strong> LFP has higher power density than NMC</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3><i class="fas fa-clock"></i> Cycle Life & Aging</h3>
+                        <div class="technical-details">
+                            <h4>Degradation Mechanisms:</h4>
+                            <ul>
+                                <li><strong>SEI Growth:</strong> Solid electrolyte interface thickening</li>
+                                <li><strong>Lithium Plating:</strong> Metallic lithium deposition on anode</li>
+                                <li><strong>Active Material Loss:</strong> Particle cracking and isolation</li>
+                                <li><strong>Electrolyte Decomposition:</strong> Chemical breakdown over time</li>
+                            </ul>
+                            <h4>Cycle Life Factors:</h4>
+                            <ul>
+                                <li><strong>Depth of Discharge:</strong> Shallower cycles extend life</li>
+                                <li><strong>Charging Rate:</strong> Fast charging accelerates aging</li>
+                                <li><strong>Temperature:</strong> High temperatures increase degradation</li>
+                                <li><strong>State of Charge:</strong> High SoC storage reduces life</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-percentage"></i> State of Health (SoH)</h3>
+                        <div class="soh-indicators">
+                            <div class="soh-item">
+                                <span class="soh-label">Capacity Retention</span>
+                                <span class="soh-value">85%</span>
+                                <div class="soh-bar">
+                                    <div class="soh-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="soh-item">
+                                <span class="soh-label">Internal Resistance</span>
+                                <span class="soh-value">+25%</span>
+                                <div class="soh-bar">
+                                    <div class="soh-fill resistance" style="width: 25%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="technical-details">
+                            <h4>SoH Measurement Methods:</h4>
+                            <ul>
+                                <li><strong>Capacity Test:</strong> Full charge/discharge cycle</li>
+                                <li><strong>Impedance Spectroscopy:</strong> AC resistance measurement</li>
+                                <li><strong>Voltage Curve Analysis:</strong> Characteristic voltage patterns</li>
+                                <li><strong>Coulomb Counting:</strong> Total charge throughput tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="management" class="section">
+            <div class="container">
+                <h2>Battery Management System (BMS)</h2>
+                <div class="bms-overview">
+                    <div class="bms-card">
+                        <h3><i class="fas fa-microchip"></i> BMS Functions</h3>
+                        <div class="bms-functions">
+                            <div class="function-item">
+                                <h4>State Estimation</h4>
+                                <ul>
+                                    <li>State of Charge (SoC) calculation</li>
+                                    <li>State of Health (SoH) monitoring</li>
+                                    <li>State of Power (SoP) estimation</li>
+                                    <li>State of Energy (SoE) tracking</li>
+                                </ul>
+                            </div>
+                            <div class="function-item">
+                                <h4>Protection</h4>
+                                <ul>
+                                    <li>Overvoltage protection</li>
+                                    <li>Undervoltage protection</li>
+                                    <li>Overcurrent protection</li>
+                                    <li>Overtemperature protection</li>
+                                </ul>
+                            </div>
+                            <div class="function-item">
+                                <h4>Cell Balancing</h4>
+                                <ul>
+                                    <li>Passive balancing (resistors)</li>
+                                    <li>Active balancing (capacitors/inductors)</li>
+                                    <li>Equalization algorithms</li>
+                                    <li>Balancing during charge/discharge</li>
+                                </ul>
+                            </div>
+                            <div class="function-item">
+                                <h4>Thermal Management</h4>
+                                <ul>
+                                    <li>Temperature monitoring</li>
+                                    <li>Cooling system control</li>
+                                    <li>Heating system control</li>
+                                    <li>Thermal runaway prevention</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3><i class="fas fa-brain"></i> Advanced BMS Algorithms</h3>
+                        <div class="technical-details">
+                            <h4>State Estimation Algorithms:</h4>
+                            <ul>
+                                <li><strong>Coulomb Counting:</strong> Current integration method</li>
+                                <li><strong>Kalman Filter:</strong> Optimal state estimation</li>
+                                <li><strong>Neural Networks:</strong> Machine learning-based estimation</li>
+                                <li><strong>Equivalent Circuit Models:</strong> Electrical circuit modeling</li>
+                            </ul>
+                            <h4>Adaptive Algorithms:</h4>
+                            <ul>
+                                <li><strong>Parameter Identification:</strong> Real-time parameter updates</li>
+                                <li><strong>Aging Compensation:</strong> SoH-based adjustments</li>
+                                <li><strong>Temperature Compensation:</strong> Thermal effects modeling</li>
+                                <li><strong>Learning Algorithms:</strong> Pattern recognition and prediction</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-shield-alt"></i> Safety Systems</h3>
+                        <div class="technical-details">
+                            <h4>Hardware Safety:</h4>
+                            <ul>
+                                <li><strong>Fuses:</strong> Overcurrent protection devices</li>
+                                <li><strong>Contactors:</strong> High-voltage switching</li>
+                                <li><strong>Precharge Circuits:</strong> Soft start for high voltage</li>
+                                <li><strong>Isolation Monitoring:</strong> Ground fault detection</li>
+                            </ul>
+                            <h4>Software Safety:</h4>
+                            <ul>
+                                <li><strong>Watchdog Timers:</strong> System monitoring</li>
+                                <li><strong>Redundant Sensors:</strong> Multiple measurement paths</li>
+                                <li><strong>Fault Detection:</strong> Anomaly identification</li>
+                                <li><strong>Emergency Shutdown:</strong> Safe system deactivation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Future Battery Technologies</h2>
+                <div class="future-tech">
+                    <div class="tech-card">
+                        <h3><i class="fas fa-rocket"></i> Solid-State Batteries</h3>
+                        <div class="technical-details">
+                            <h4>Key Advantages:</h4>
+                            <ul>
+                                <li><strong>Energy Density:</strong> 400-600 Wh/kg (2x current)</li>
+                                <li><strong>Safety:</strong> No flammable liquid electrolyte</li>
+                                <li><strong>Cycle Life:</strong> 10,000+ cycles</li>
+                                <li><strong>Charging Speed:</strong> 10-15 minutes to 80%</li>
+                            </ul>
+                            <h4>Technical Challenges:</h4>
+                            <ul>
+                                <li><strong>Ionic Conductivity:</strong> Lower than liquid electrolytes</li>
+                                <li><strong>Interface Stability:</strong> Electrode-electrolyte contact</li>
+                                <li><strong>Manufacturing:</strong> Complex production processes</li>
+                                <li><strong>Cost:</strong> Currently 3-5x higher than Li-ion</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tech-card">
+                        <h3><i class="fas fa-leaf"></i> Lithium-Sulfur Batteries</h3>
+                        <div class="technical-details">
+                            <h4>Potential Benefits:</h4>
+                            <ul>
+                                <li><strong>Energy Density:</strong> 500-800 Wh/kg theoretical</li>
+                                <li><strong>Cost:</strong> Sulfur is abundant and cheap</li>
+                                <li><strong>Environmental:</strong> Less toxic materials</li>
+                                <li><strong>Weight:</strong> Lighter than Li-ion</li>
+                            </ul>
+                            <h4>Current Limitations:</h4>
+                            <ul>
+                                <li><strong>Cycle Life:</strong> Limited to 100-500 cycles</li>
+                                <li><strong>Sulfur Shuttle:</strong> Polysulfide migration</li>
+                                <li><strong>Volume Expansion:</strong> 80% expansion during cycling</li>
+                                <li><strong>Low Conductivity:</strong> Sulfur is insulating</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 EV Guide. Understanding the future of battery technology.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
