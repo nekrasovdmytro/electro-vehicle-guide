@@ -367,6 +367,204 @@ body {
     }
 }
 
+/* Charging Tips Section */
+.charging-tips-section {
+    margin-top: 50px;
+}
+
+.charging-tips-section h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tip-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-card h4 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.tip-card h4 i {
+    margin-right: 10px;
+}
+
+.tip-card ul {
+    list-style: none;
+}
+
+.tip-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.tip-card li:last-child {
+    border-bottom: none;
+}
+
+.tip-card strong {
+    color: #2c3e50;
+}
+
+/* Advanced Charging Technology */
+.advanced-charging {
+    margin-top: 50px;
+}
+
+.advanced-charging h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tech-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+}
+
+.tech-card h4 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.tech-card h4 i {
+    margin-right: 10px;
+}
+
+/* Charging Networks */
+.charging-networks {
+    margin-top: 50px;
+}
+
+.charging-networks h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.network-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.network-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.network-card:hover {
+    transform: translateY(-5px);
+}
+
+.network-card h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.network-card p {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.network-card ul {
+    list-style: none;
+}
+
+.network-card li {
+    padding: 5px 0;
+    color: #555;
+}
+
+.network-card strong {
+    color: #2c3e50;
+}
+
+/* Enhanced charging cards for technical details */
+.charging-card .technical-details {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.charging-card .technical-details h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.charging-card .technical-details ul {
+    margin-top: 8px;
+}
+
+.charging-card .technical-details li {
+    padding: 4px 0;
+    font-size: 0.85rem;
+}
+
+/* Responsive adjustments for charging sections */
+@media (max-width: 768px) {
+    .tips-grid,
+    .tech-grid,
+    .network-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .charging-tips-section h3,
+    .advanced-charging h3,
+    .charging-networks h3 {
+        font-size: 1.5rem;
+    }
+    
+    .tip-card,
+    .tech-card,
+    .network-card {
+        padding: 20px;
+    }
+}
+
 .electron-flow {
     display: flex;
     justify-content: space-between;

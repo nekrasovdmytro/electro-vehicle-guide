@@ -163,46 +163,235 @@
 
         <section id="charging" class="section">
             <div class="container">
-                <h2>EV Charging Types</h2>
+                <h2>EV Charging Types & Technology</h2>
                 <div class="charging-types">
                     <div class="charging-card">
                         <div class="charging-icon level1">
                             <i class="fas fa-home"></i>
                         </div>
-                        <h3>Level 1 (120V)</h3>
-                        <p>Standard household outlet</p>
+                        <h3>Level 1 (120V AC)</h3>
+                        <p>Standard household outlet charging</p>
                         <ul>
                             <li>2-5 miles per hour</li>
                             <li>8-12 hours for full charge</li>
                             <li>No installation needed</li>
+                            <li>1.4 kW maximum power</li>
                         </ul>
                         <div class="charging-speed">Slow</div>
+                        <div class="technical-details">
+                            <h4>Technical Specifications:</h4>
+                            <ul>
+                                <li><strong>Voltage:</strong> 120V AC (single phase)</li>
+                                <li><strong>Current:</strong> 12A maximum (15A circuit)</li>
+                                <li><strong>Power:</strong> 1.44 kW theoretical, 1.2 kW practical</li>
+                                <li><strong>Efficiency:</strong> 85-90% (AC to DC conversion)</li>
+                                <li><strong>Connector:</strong> NEMA 5-15 (standard outlet)</li>
+                            </ul>
+                            <h4>Best For:</h4>
+                            <ul>
+                                <li>Overnight charging at home</li>
+                                <li>Emergency charging anywhere</li>
+                                <li>Low daily mileage drivers</li>
+                                <li>Renters without dedicated charging</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="charging-card">
                         <div class="charging-icon level2">
                             <i class="fas fa-charging-station"></i>
                         </div>
-                        <h3>Level 2 (240V)</h3>
-                        <p>Home or public charging</p>
+                        <h3>Level 2 (240V AC)</h3>
+                        <p>Home and public charging stations</p>
                         <ul>
                             <li>10-60 miles per hour</li>
                             <li>4-8 hours for full charge</li>
-                            <li>Professional installation</li>
+                            <li>Professional installation required</li>
+                            <li>3.3-19.2 kW power range</li>
                         </ul>
                         <div class="charging-speed">Medium</div>
+                        <div class="technical-details">
+                            <h4>Technical Specifications:</h4>
+                            <ul>
+                                <li><strong>Voltage:</strong> 240V AC (single phase)</li>
+                                <li><strong>Current:</strong> 16-80A depending on station</li>
+                                <li><strong>Power:</strong> 3.8-19.2 kW (most common: 7.2-11.5 kW)</li>
+                                <li><strong>Efficiency:</strong> 90-95% (AC to DC conversion)</li>
+                                <li><strong>Connector:</strong> SAE J1772 (North America)</li>
+                            </ul>
+                            <h4>Installation Requirements:</h4>
+                            <ul>
+                                <li>40-100A dedicated circuit</li>
+                                <li>Professional electrician installation</li>
+                                <li>Permit requirements vary by location</li>
+                                <li>Cost: $500-2,000 including hardware</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="charging-card">
                         <div class="charging-icon level3">
                             <i class="fas fa-bolt"></i>
                         </div>
                         <h3>DC Fast Charging</h3>
-                        <p>High-speed public stations</p>
+                        <p>High-speed public charging networks</p>
                         <ul>
                             <li>60-200+ miles per hour</li>
                             <li>20-40 minutes for 80%</li>
                             <li>High cost per session</li>
+                            <li>50-350 kW power output</li>
                         </ul>
                         <div class="charging-speed">Fast</div>
+                        <div class="technical-details">
+                            <h4>Technical Specifications:</h4>
+                            <ul>
+                                <li><strong>Voltage:</strong> 400-800V DC (direct to battery)</li>
+                                <li><strong>Current:</strong> 125-500A maximum</li>
+                                <li><strong>Power:</strong> 50-350 kW (most common: 150-250 kW)</li>
+                                <li><strong>Efficiency:</strong> 95-98% (no AC conversion)</li>
+                                <li><strong>Connectors:</strong> CCS, CHAdeMO, Tesla Supercharger</li>
+                            </ul>
+                            <h4>Charging Curve:</h4>
+                            <ul>
+                                <li>Peak rate: 0-50% battery</li>
+                                <li>Tapering: 50-80% battery</li>
+                                <li>Slow rate: 80-100% battery</li>
+                                <li>Optimal stop: 80% for time efficiency</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charging Tips and Best Practices -->
+                <div class="charging-tips-section">
+                    <h3><i class="fas fa-lightbulb"></i> Smart Charging Tips & Best Practices</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4><i class="fas fa-clock"></i> Optimal Charging Times</h4>
+                            <ul>
+                                <li><strong>Off-peak hours:</strong> Charge during 10 PM - 6 AM for lower rates</li>
+                                <li><strong>Solar charging:</strong> Use solar panels during peak sun hours</li>
+                                <li><strong>Grid demand:</strong> Avoid charging during peak demand (5-8 PM)</li>
+                                <li><strong>Battery health:</strong> Don't charge to 100% daily unless needed</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-thermometer-half"></i> Temperature Management</h4>
+                            <ul>
+                                <li><strong>Cold weather:</strong> Pre-heat battery before fast charging</li>
+                                <li><strong>Hot weather:</strong> Park in shade, avoid charging in extreme heat</li>
+                                <li><strong>Optimal range:</strong> 15-35°C (59-95°F) for best performance</li>
+                                <li><strong>Battery cooling:</strong> Let battery cool after fast charging</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-shield-alt"></i> Safety & Maintenance</h4>
+                            <ul>
+                                <li><strong>Regular inspection:</strong> Check charging cable for damage</li>
+                                <li><strong>Proper connection:</strong> Ensure secure plug connection</li>
+                                <li><strong>Weather protection:</strong> Keep connectors dry and clean</li>
+                                <li><strong>Emergency stop:</strong> Know how to stop charging if needed</li>
+                            </ul>
+                        </div>
+                        <div class="tip-card">
+                            <h4><i class="fas fa-dollar-sign"></i> Cost Optimization</h4>
+                            <ul>
+                                <li><strong>Home charging:</strong> 3-5x cheaper than public stations</li>
+                                <li><strong>Membership programs:</strong> Join charging networks for discounts</li>
+                                <li><strong>Time-of-use rates:</strong> Use utility company's EV charging programs</li>
+                                <li><strong>Solar integration:</strong> Install solar panels for free charging</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Charging Technology -->
+                <div class="advanced-charging">
+                    <h3><i class="fas fa-microchip"></i> Advanced Charging Technology</h3>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <h4><i class="fas fa-wifi"></i> Smart Charging & Connectivity</h4>
+                            <div class="technical-details">
+                                <ul>
+                                    <li><strong>WiFi/4G Connectivity:</strong> Remote monitoring and control</li>
+                                    <li><strong>Mobile Apps:</strong> Start/stop charging, schedule sessions</li>
+                                    <li><strong>Load Balancing:</strong> Distribute power across multiple EVs</li>
+                                    <li><strong>Grid Integration:</strong> V2G (Vehicle-to-Grid) capabilities</li>
+                                    <li><strong>Dynamic Pricing:</strong> Real-time rate adjustments</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <h4><i class="fas fa-plug"></i> Charging Standards & Compatibility</h4>
+                            <div class="technical-details">
+                                <ul>
+                                    <li><strong>CCS (Combined Charging System):</strong> European/US standard</li>
+                                    <li><strong>CHAdeMO:</strong> Japanese standard, being phased out</li>
+                                    <li><strong>Tesla Supercharger:</strong> Proprietary network</li>
+                                    <li><strong>ISO 15118:</strong> Plug & Charge communication</li>
+                                    <li><strong>OCPP:</strong> Open Charge Point Protocol</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <h4><i class="fas fa-battery-three-quarters"></i> Battery Management During Charging</h4>
+                            <div class="technical-details">
+                                <ul>
+                                    <li><strong>Cell Balancing:</strong> Equalizes charge across all cells</li>
+                                    <li><strong>Temperature Monitoring:</strong> Prevents overheating</li>
+                                    <li><strong>Charge Rate Optimization:</strong> Adjusts based on battery state</li>
+                                    <li><strong>State of Health Tracking:</strong> Monitors battery degradation</li>
+                                    <li><strong>Thermal Management:</strong> Active cooling/heating systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <h4><i class="fas fa-chart-line"></i> Charging Efficiency Factors</h4>
+                            <div class="technical-details">
+                                <ul>
+                                    <li><strong>AC vs DC:</strong> DC charging bypasses onboard charger</li>
+                                    <li><strong>Power Factor:</strong> 0.95-0.98 for modern chargers</li>
+                                    <li><strong>Harmonic Distortion:</strong> <5% for quality chargers</li>
+                                    <li><strong>Voltage Drop:</strong> Minimized with proper wiring</li>
+                                    <li><strong>Conversion Losses:</strong> 5-15% depending on technology</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charging Network Information -->
+                <div class="charging-networks">
+                    <h3><i class="fas fa-network-wired"></i> Major Charging Networks</h3>
+                    <div class="network-grid">
+                        <div class="network-card">
+                            <h4>Tesla Supercharger</h4>
+                            <p>Proprietary network for Tesla vehicles</p>
+                            <ul>
+                                <li><strong>Power:</strong> Up to 250 kW</li>
+                                <li><strong>Connector:</strong> Tesla proprietary</li>
+                                <li><strong>Coverage:</strong> Global, extensive</li>
+                                <li><strong>Cost:</strong> $0.25-0.50/kWh</li>
+                            </ul>
+                        </div>
+                        <div class="network-card">
+                            <h4>Electrify America</h4>
+                            <p>VW-funded network, open to all EVs</p>
+                            <ul>
+                                <li><strong>Power:</strong> Up to 350 kW</li>
+                                <li><strong>Connector:</strong> CCS, CHAdeMO</li>
+                                <li><strong>Coverage:</strong> US, expanding</li>
+                                <li><strong>Cost:</strong> $0.31-0.43/kWh</li>
+                            </ul>
+                        </div>
+                        <div class="network-card">
+                            <h4>ChargePoint</h4>
+                            <p>Mixed network of Level 2 and DC fast chargers</p>
+                            <ul>
+                                <li><strong>Power:</strong> 7-350 kW</li>
+                                <li><strong>Connector:</strong> J1772, CCS, CHAdeMO</li>
+                                <li><strong>Coverage:</strong> US, Canada, Europe</li>
+                                <li><strong>Cost:</strong> Varies by location</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
