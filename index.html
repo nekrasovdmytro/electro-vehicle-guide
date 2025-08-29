@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Vehicle Guide - Understanding EVs & Charging</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bolt"></i>
+                <span>EV Guide</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#basics">Electricity Basics</a></li>
+                <li><a href="#charging">Charging</a></li>
+                <li><a href="#vehicles">EV Models</a></li>
+                <li><a href="#comparison">EV vs Gas</a></li>
+                <li><a href="#calculator">Range Calculator</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Understanding Electric Vehicles</h1>
+            <p>Everything you need to know about EVs, charging, and the future of transportation</p>
+            <button class="cta-button" onclick="scrollToSection('basics')">Start Learning</button>
+        </div>
+        <div class="hero-visual">
+            <div class="ev-animation">
+                <div class="car"></div>
+                <div class="charging-station"></div>
+                <div class="electricity-flow"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="basics" class="section">
+            <div class="container">
+                <h2>Understanding Electricity</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3><i class="fas fa-atom"></i> What is Electricity?</h3>
+                        <p>Electricity is the flow of electrons through a conductor. In EVs, this flow powers the motor that turns the wheels.</p>
+                        <div class="electricity-demo">
+                            <div class="electron-flow">
+                                <div class="electron"></div>
+                                <div class="electron"></div>
+                                <div class="electron"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-tachometer-alt"></i> How Electricity is Measured</h3>
+                        <ul>
+                            <li><strong>Voltage (V):</strong> Electrical pressure - like water pressure</li>
+                            <li><strong>Current (A):</strong> Flow rate - how many electrons per second</li>
+                            <li><strong>Power (W):</strong> Voltage × Current - total energy per second</li>
+                            <li><strong>Energy (kWh):</strong> Power × Time - total energy used</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="charging" class="section">
+            <div class="container">
+                <h2>EV Charging Types</h2>
+                <div class="charging-types">
+                    <div class="charging-card">
+                        <div class="charging-icon level1">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Level 1 (120V)</h3>
+                        <p>Standard household outlet</p>
+                        <ul>
+                            <li>2-5 miles per hour</li>
+                            <li>8-12 hours for full charge</li>
+                            <li>No installation needed</li>
+                        </ul>
+                        <div class="charging-speed">Slow</div>
+                    </div>
+                    <div class="charging-card">
+                        <div class="charging-icon level2">
+                            <i class="fas fa-charging-station"></i>
+                        </div>
+                        <h3>Level 2 (240V)</h3>
+                        <p>Home or public charging</p>
+                        <ul>
+                            <li>10-60 miles per hour</li>
+                            <li>4-8 hours for full charge</li>
+                            <li>Professional installation</li>
+                        </ul>
+                        <div class="charging-speed">Medium</div>
+                    </div>
+                    <div class="charging-card">
+                        <div class="charging-icon level3">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>DC Fast Charging</h3>
+                        <p>High-speed public stations</p>
+                        <ul>
+                            <li>60-200+ miles per hour</li>
+                            <li>20-40 minutes for 80%</li>
+                            <li>High cost per session</li>
+                        </ul>
+                        <div class="charging-speed">Fast</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vehicles" class="section">
+            <div class="container">
+                <h2>Popular Electric Vehicles</h2>
+                <div class="vehicle-filters">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="sedan">Sedans</button>
+                    <button class="filter-btn" data-category="suv">SUVs</button>
+                    <button class="filter-btn" data-category="luxury">Luxury</button>
+                </div>
+                <div class="vehicles-grid" id="vehiclesGrid">
+                    <!-- Vehicles will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison" class="section">
+            <div class="container">
+                <h2>EV vs Gas Vehicles</h2>
+                <div class="comparison-table">
+                    <div class="comparison-header">
+                        <div class="comparison-cell"></div>
+                        <div class="comparison-cell">Electric Vehicles</div>
+                        <div class="comparison-cell">Gas Vehicles</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Fuel Cost</div>
+                        <div class="comparison-cell positive">$0.12-0.15/mile</div>
+                        <div class="comparison-cell negative">$0.15-0.20/mile</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Maintenance</div>
+                        <div class="comparison-cell positive">Low (fewer parts)</div>
+                        <div class="comparison-cell negative">Higher (engine, transmission)</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Range</div>
+                        <div class="comparison-cell neutral">200-400 miles</div>
+                        <div class="comparison-cell positive">300-500 miles</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Refueling Time</div>
+                        <div class="comparison-cell negative">30 min - 8 hours</div>
+                        <div class="comparison-cell positive">5-10 minutes</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-cell">Environmental Impact</div>
+                        <div class="comparison-cell positive">Zero emissions</div>
+                        <div class="comparison-cell negative">CO2 emissions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator" class="section">
+            <div class="container">
+                <h2>Range Calculator</h2>
+                <div class="calculator-grid">
+                    <div class="calculator-form">
+                        <h3>Calculate Your EV Range</h3>
+                        <div class="form-group">
+                            <label for="batteryCapacity">Battery Capacity (kWh)</label>
+                            <input type="number" id="batteryCapacity" placeholder="75">
+                        </div>
+                        <div class="form-group">
+                            <label for="efficiency">Efficiency (kWh/100mi)</label>
+                            <input type="number" id="efficiency" placeholder="30">
+                        </div>
+                        <div class="form-group">
+                            <label for="temperature">Temperature (°F)</label>
+                            <input type="number" id="temperature" placeholder="70">
+                        </div>
+                        <div class="form-group">
+                            <label for="speed">Average Speed (mph)</label>
+                            <input type="number" id="speed" placeholder="65">
+                        </div>
+                        <button onclick="calculateRange()" class="calculate-btn">Calculate Range</button>
+                    </div>
+                    <div class="calculator-results">
+                        <h3>Results</h3>
+                        <div class="result-item">
+                            <span>Ideal Range:</span>
+                            <span id="idealRange">--</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Cold Weather Range:</span>
+                            <span id="coldRange">--</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Highway Range:</span>
+                            <span id="highwayRange">--</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Battery Degradation (5 years):</span>
+                            <span id="degradation">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 EV Guide. Learn about the future of transportation.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
